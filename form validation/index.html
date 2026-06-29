@@ -8,19 +8,24 @@
 </head>
 <body>
     <form id="registrationform" action="/submit-form" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <div id="emailError" class="error">Please enter a valid email address.</div>
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+        </div>
 
-        <label for="email">Age:</label>
-        <input type="number" id="age" name="age" required>
-        <div id="ageError" class="error">Please enter a valid age between 18 and 99.</div>
+        <div>
+            <label for="email">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <span class="error" id="ageError"></span>
+        </div>
 
 
-        <label for="message">Feedback Message</label>
-        <textarea id="message" placeholder="Enter your feedback here..."></textarea>
-        <div id="messageError" class="error">Message cannot exceed 5000 characters or 100 words.</div>
-        <div id="wordCountDisplay" style="font-size: 0.85em; color: #666; margin-top: 5px;">Words: 0/100</div>
+        <div>
+            <label for="message">Feedback Message:</label>
+            <textarea id="message" placeholder="Enter your feedback here"></textarea>
+            <span class="error" id="messageError"></span>
+        </div>
 
         <button type="submit">Submit Feedback</button>
     </form>

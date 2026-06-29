@@ -15,4 +15,13 @@ form.addEventListener('submit',function(event){
         emailError.textContent = 'Please enter a valid email address.';
         return;
     }
+
+    // Validate age
+    const ageInput = document.getElementById('age');
+    const ageError = document.getElementById('ageError');
+    const ageValue = parseInt(ageInput.value,10);
+    if(isNaN(ageValue) || ageValue < 18 || ageValue > 99){
+        ageError.textContent = 'Age must be between 18 and 99';
+        return;
+    }
 })

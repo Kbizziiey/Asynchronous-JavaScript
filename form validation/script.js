@@ -24,4 +24,12 @@ form.addEventListener('submit',function(event){
         ageError.textContent = 'Age must be between 18 and 99';
         return;
     }
+
+    //Word count validation
+    const trimmedText = messageValue.trim();
+    const wordCount = trimmedText === '' ? 0 : trimmedText.split(/\s+/).length;
+    if (wordCount > 100) {
+        messageError.textContent = 'Message cannot exceed 100 words.';
+        return;
+    }
 })

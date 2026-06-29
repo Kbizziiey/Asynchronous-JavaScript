@@ -32,4 +32,7 @@ form.addEventListener('submit',function(event){
         messageError.textContent = 'Message cannot exceed 100 words.';
         return;
     }
-})
+
+    form.submit()
+
+});
